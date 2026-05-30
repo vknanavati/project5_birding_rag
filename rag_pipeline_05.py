@@ -31,7 +31,7 @@ TOP_K_RETRIEVE = 10
 # How many top chunks to pass to the LLM after re-ranking
 # We don't want to pass all 10 — just the most relevant ones
 # Too many chunks = LLM gets confused or loses focus
-TOP_K_CONTEXT = 3
+TOP_K_CONTEXT = 5
 
 # The Groq model to use for generation
 # llama-3.1-8b-instant is fast, free, and very capable
