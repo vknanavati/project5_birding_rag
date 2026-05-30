@@ -13,6 +13,7 @@
 # ============================================================
 
 import os                      # environment variables
+import time
 from dotenv import load_dotenv # reads .env file
 from groq import Groq          # Groq API client
 
@@ -191,3 +192,8 @@ if __name__ == "__main__":
         # Display both answers side by side
         display_comparison(question, llm_answer, rag_result)
         print()
+
+        # Pause between questions to avoid hitting Groq's rate limit
+        # The free tier allows 6000 tokens per minute
+        print("Waiting 15 seconds to avoid rate limit...")
+        time.sleep(15)
